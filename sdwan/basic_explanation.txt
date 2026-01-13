@@ -1,0 +1,91 @@
+Cisco SD-WAN is a software-defined way to connect branch offices, data centers, and cloud environments over any type of network connection (MPLS, broadband Internet, LTE/5G), while keeping centralized control, security, and performance guarantees.
+
+      Cisco SD-WAN is a centrally controlled, policy-driven WAN that securely uses any transport and automatically chooses the best path for each application.
+
+Instead of manually configuring routers site-by-site, you define intent once, and the network enforces it everywhere.
+
+The Core Problem SD-WAN Solves
+Traditional WANs:
+    Are hardware-centric
+    Depend heavily on expensive MPLS
+    Require manual configuration per router
+    Are slow to adapt to cloud apps (SaaS, IaaS)
+
+Cisco SD-WAN fixes this by:
+    Separating control from data forwarding
+    Using software policies
+    Dynamically choosing the best path per application
+
+Cisco SD-WAN at a High Level
+1. Overlay vs Underlay
+    Underlay = The physical network
+    (Internet, MPLS, LTE, 5G — whatever you have)
+    Overlay = Secure tunnels (IPsec) built on top of the underlay
+
+SD-WAN doesn’t replace the network — it abstracts and optimizes it.
+
+Key Cisco SD-WAN Components
+
+    1) vManage – Management Plane
+        Single web dashboard
+        Configurations, monitoring, troubleshooting
+        Zero-Touch Provisioning (ZTP)
+    
+    2) vSmart – Control Plane
+        Centralized routing intelligence
+        Distributes policies (QoS, routing, security)
+        Decides how traffic should flow
+    
+    3) vBond – Orchestration Plane
+        First point of contact for new devices
+        Handles authentication and NAT traversal
+    
+    4) Edge Routers (cEdge / vEdge) – Data Plane
+        Sit at branches, DCs, cloud
+        Forward actual traffic
+        Measure link performance in real time
+
+How Traffic Decisions Are Made
+Cisco SD-WAN continuously measures:
+    Latency
+    Jitter
+    Packet loss
+
+Policies can say things like:
+    “Voice must stay under 150ms latency”
+    “ERP traffic prefers MPLS”
+    “If loss > 2%, fail over immediately”
+
+The router then dynamically chooses the best path per packet.
+
+Why Enterprises Use Cisco SD-WAN
+
+    1) Operational Benefits
+        Centralized management
+        Faster branch deployment (minutes, not weeks)
+        Reduced human error
+    
+    2) Cost Benefits
+        Use cheaper Internet links
+        Reduce MPLS dependency
+        Better bandwidth utilization
+    
+    3) Application Performance
+        App-aware routing
+        SaaS optimization
+        Cloud-first design
+    
+    4) Security Integration
+        Encrypted tunnels by default
+        Segmentation (VRFs)
+        Integrates with firewall, Zscaler, Umbrella, SASE
+
+
+Simple Mental Model (For Exams & Interviews)
+    vManage = “The dashboard”
+    vSmart = “The brain”
+    vBond = “The door guard”
+    Edge routers = “The workers moving traffic”
+
+
+
